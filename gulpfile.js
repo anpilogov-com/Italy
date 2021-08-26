@@ -64,7 +64,6 @@ gulp.task("gen-svg", () => {
 gulp.task("observe", () => {
    gulp.watch("./styles/scss/**/*.scss", gulp.series("gen-scss"));
    gulp.watch("./images/unoptimized/**/*.svg", gulp.series("gen-svg"));
-   gulp.watch("./styles/css/**/*.css", gulp.series("gen-css"));
 });
 
 gulp.task("observe-scss", () => {
@@ -73,8 +72,4 @@ gulp.task("observe-scss", () => {
 
 gulp.task("observe-svg", () => {
    gulp.watch("./images/unoptimized/**/*.svg", gulp.series("gen-svg"));
-});
-
-gulp.task("observe-css", () => {
-   gulp.watch("./styles/css/**/*.css", gulp.series("gen-css"));
 });

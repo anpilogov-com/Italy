@@ -1,21 +1,111 @@
-@mixin font($font_name, $file_name, $weight, $style) {
-   @font-face {
-      font-family: $font_name;
-      font-display: swap;
-      src: url("../../fonts/#{$file_name}.woff") format("woff"),
-         url("../../fonts/#{$file_name}.woff2") format("woff2");
-      font-weight: #{$weight};
-      font-style: #{$style};
-   }
-}
-
 @import "fonts.scss";
 
-a {
-   color: aqua;
-   font-size: 24px;
+%font-element-bold {
+   font-family: Roboto, sans-serif;
+   font-weight: bold;
 }
 
-p {
-   color: coral;
+%first-color {
+   background-color: #029044;
+}
+
+%second-color {
+   background-color: #d51d21;
+}
+
+%main-color {
+   background-color: #ffffff;
+   color: #d51d21;
+}
+
+%width-fill {
+   width: 100%;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   font-family: Roboto, sans-serif;
+   font-style: normal;
+}
+
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+html {
+   overflow: hidden;
+}
+
+.page {
+   max-width: 1920px;
+}
+
+.content {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   @extend %width-fill;
+   height: 100%;
+}
+
+.baner {
+   display: grid;
+   align-items: center;
+   .baner__top {
+      @extend %first-color, %width-fill;
+      height: 19px;
+   }
+   .baner__midle {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @extend %main-color, %width-fill;
+      min-height: 72px;
+   }
+   .baner__bottom {
+      @extend %second-color, %width-fill;
+      height: 19px;
+   }
+   div {
+      h1 {
+         @extend %font-element-bold;
+         text-align: center;
+      }
+      p {
+         text-align: center;
+      }
+   }
+   .baner__image {
+      @extend %width-fill;
+      height: 163px;
+      .baner__image--size {
+         @extend %width-fill;
+         object-fit: cover;
+         height: 100%;
+      }
+   }
+   .baner__ad {
+      display: grid;
+      grid-template-columns: max-content min-content;
+      justify-content: space-around;
+      padding: 8px 16px 8px 16px;
+      @extend %width-fill;
+      height: 44px;
+      background-color: #f98000;
+      p {
+         font-size: 12px;
+         color: #ffffff;
+         max-width: 207px;
+         text-align: left;
+      }
+      .baner__as--image {
+         object-fit: none;
+         height: 44px;
+         width: 64px;
+         padding-bottom: 12px;
+      }
+   }
 }

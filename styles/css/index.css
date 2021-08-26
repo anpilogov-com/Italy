@@ -1,1 +1,112 @@
-a{color:#0ff;font-size:24px}p{color:coral}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto"), local("Roboto-Regular"), url("../../fonts/woff/Roboto-Regular.woff2") format("woff2"), url("../../fonts/woff/Roboto-Regular.woff") format("woff"), url("../../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto"), local("Roboto-Bold"), url("../../fonts/woff/Roboto-Bold.woff2") format("woff2"), url("../../fonts/woff/Roboto-Bold.woff") format("woff"), url("../../fonts/Roboto-Bold.ttf") format("truetype");
+}
+.baner div h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+
+.baner .baner__top {
+  background-color: #029044;
+}
+
+.baner .baner__bottom {
+  background-color: #d51d21;
+}
+
+.baner .baner__midle {
+  background-color: #ffffff;
+  color: #d51d21;
+}
+
+.baner .baner__ad, .baner .baner__image .baner__image--size, .baner .baner__image, .baner .baner__bottom, .baner .baner__midle, .baner .baner__top, .content {
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  overflow: hidden;
+}
+
+.page {
+  max-width: 1920px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.baner {
+  display: grid;
+  align-items: center;
+}
+.baner .baner__top {
+  height: 19px;
+}
+.baner .baner__midle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 72px;
+}
+.baner .baner__bottom {
+  height: 19px;
+}
+.baner div h1 {
+  text-align: center;
+}
+.baner div p {
+  text-align: center;
+}
+.baner .baner__image {
+  height: 163px;
+}
+.baner .baner__image .baner__image--size {
+  object-fit: cover;
+  height: 100%;
+}
+.baner .baner__ad {
+  display: grid;
+  grid-template-columns: max-content min-content;
+  justify-content: space-around;
+  padding: 8px 16px 8px 16px;
+  height: 44px;
+  background-color: #f98000;
+}
+.baner .baner__ad p {
+  font-size: 12px;
+  color: #ffffff;
+  max-width: 207px;
+  text-align: left;
+}
+.baner .baner__ad .baner__as--image {
+  object-fit: none;
+  height: 44px;
+  width: 64px;
+  padding-bottom: 12px;
+}
+/*# sourceMappingURL=index.css.map */
