@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;;AAGJ;EACI","file":"index.css","sourcesContent":["a {\r\n    color: aqua;\r\n    font-size: 24px;\r\n}\r\n\r\np {\r\n    color: coral;\r\n}"]}
