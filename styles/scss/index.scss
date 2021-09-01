@@ -123,7 +123,7 @@
       flex-direction: column;
       align-items: stretch;
       .form__name,
-      .form__number {
+      .form__tel {
          margin-top: 16px;
          border: none;
          height: 32px;
@@ -224,7 +224,7 @@
    display: inline;
    @extend %width-fill;
    padding-bottom: 16px;
-   .slide {
+   .slide, .slide--tow {
       display: grid;
       grid-template-rows: min-content max-content min-content;
       .slider__title {
@@ -276,7 +276,7 @@
       align-items: center;
       flex-wrap: nowrap;
       margin-top: 30px;
-      .dot {
+      .dot, .dot--tow {
          cursor: pointer;
          height: 13px;
          width: 13px;
@@ -288,7 +288,7 @@
       }
 
       .active,
-      dot:hover {
+      dot:hover, dot--tow:hover {
          border: solid rgba($color: #e5e5e5, $alpha: 1);
          background-color: #0c93a4;
          //background-color: #0C93A4;

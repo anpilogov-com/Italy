@@ -7,6 +7,8 @@ const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const fonter = require("gulp-fonter");
 const csso = require("gulp-csso");
+const minify = require("gulp-minify");
+const htmlmin = require("gulp-htmlmin");
 
 /** Generating a cascading style file */
 
@@ -43,11 +45,24 @@ gulp.task("gen-font", () => {
 
 /** Minimizing a CSS file */
 
-gulp.task("gen-css", function () {
+gulp.task("gen-css", () => {
    return gulp
       .src("./styles/css/index.css")
       .pipe(csso())
       .pipe(gulp.dest("./styles/css/"));
+});
+
+/** Minimizing a JS file */
+
+gulp.task("gen-js", async () => {
+   gulp.src(["./js/**/*.js"]).pipe(minify()).pipe(gulp.dest("./js/"));
+});
+
+gulp.task("gen-html", () => {
+   return gulp
+      .src("./**/*.html")
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest("./"));
 });
 
 /** Optimizing vector images */

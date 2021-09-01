@@ -5,12 +5,14 @@
   "main": "index.js",
   "dependencies": {
     "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
     "svgo": "^2.4.0"
   },
   "devDependencies": {
     "gulp-csso": "^4.0.1",
     "gulp-fonter": "^0.3.0",
     "gulp-imagemin": "^8.0.0",
+    "gulp-minify": "^3.1.0",
     "gulp-otf2ttf": "^1.0.1",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
