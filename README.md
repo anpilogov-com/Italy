@@ -1,6 +1,9 @@
 # Italy
 This project was proposed by an anonymous company through a private [Head Hunter](https://hh.ru/employer/5557726) recruiter. The project did not require difficult decisions and was presented in a slightly neat form in Figma. The layout did not require responsive layout, but I took the initiative and made a kind of responsive layout. Thanks to this assignment, such a job appeared in my portfolio. Thank you for this work.
 
+# [View site on page](https://anpilogov-com.github.io/Italy/public/)
+Watch the work online without installing the project on your personal computer by clicking on the link in the title.
+
 # Lighthouse
 Based on Google Lighthouse research the website is reasonably well optimized in several ways.
 
